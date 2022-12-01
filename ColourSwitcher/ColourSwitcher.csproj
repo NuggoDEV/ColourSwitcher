@@ -114,12 +114,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\Config.cs" />
-    <Compile Include="Installers\FlowCoordinatorInstaller.cs" />
-    <Compile Include="Managers\MenuButtonManager.cs" />
+    <Compile Include="HarmonyPatches\BombColour.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\ColourSwitcherFlowCoordinator.cs" />
     <Compile Include="UI\ColourSwitcherViewController.cs" />
+    <Compile Include="Util\Resolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="manifest.json" />

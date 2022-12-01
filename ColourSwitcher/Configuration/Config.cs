@@ -1,6 +1,9 @@
-﻿using System.Runtime.CompilerServices;
-using IPA.Config.Stores;
+﻿using IPA.Config.Stores;
+using System;
+using System.Runtime.CompilerServices;
+using ColourSwitcher.HarmonyPatches;
 using UnityEngine;
+
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
 namespace ColourSwitcher
@@ -9,6 +12,19 @@ namespace ColourSwitcher
     {
         public static Config Instance { get; set; }
 
-        public static Color bombColour = Color.white;
+        public Color bombColour = Color.white;
+
+
+
+        public virtual void Changed() => ApplyValues();
+
+        public void ApplyValues()
+        {
+            if (!Plugin.enabled)
+                return;
+
+            if (bombColour == Color.black)
+                bombColour = BombColour.defaultColour;
+        }
     }
 }
