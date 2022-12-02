@@ -5,9 +5,65 @@
 
     <horizontal preferred-width='100' preferred-height='58' pad-top='8'>
 		<tab tab-name='Main' tags='tabs'>
-				<horizontal>
-					<color-setting apply-on-change="true" bind-value="true" value="bombColour" text="Bomb Colour"/>
-				</horizontal>
+			<scroll-view>
+				<color-setting apply-on-change="true" bind-value="true" value="leftSaberColour" text="Left Saber Colour"/>
+				<color-setting apply-on-change="true" bind-value="true" value="rightSaberColour" text="Right Saber Colour"/>
+				<color-setting apply-on-change="true" bind-value="true" value="bombColour" text="Bomb Colour"/>
+				<color-setting apply-on-change="true" bind-value="true" value="wallColour" text="Wall Colour"/>
+			</scroll-view>
 		</tab>
+
+		<tab tab-name='Toggles' tags='tabs'>
+            <scroll-view>
+                <toggle-setting text='Enable First Timed Switch' value='timedSwitch1Bool' apply-on-change='true' hover-hint='Enables the first timed colour switch'/>
+
+                <toggle-setting text='Enable Second Timed Switch' value='timedSwitch2Bool' apply-on-change='true' hover-hint='Enables the second timed colour switch'/>
+
+                <toggle-setting text='Enable Third Timed Switch' value='timedSwitch3Bool' apply-on-change='true' hover-hint='Enables the third timed colour switch'/>
+            
+                <toggle-setting text='Enable Fourth Timed Switch' value='timedSwitch4Bool' apply-on-change='true' hover-hint='Enables the fourth timed colour switch'/>
+            </scroll-view>
+        </tab>
+
+        <tab tab-name='Activation Times' tags='tabs'>
+            <scroll-view>
+                <slider-setting text='First Timed Switch' min='0' max='120' increment='1' show-buttons="true" value='timedSwitch1Time' apply-on-change='true' hover-hint='What time in the song the first timed switch activates.'/>
+            
+                <slider-setting text='Second Timed Switch' min='0' max='120' increment='1' show-buttons="true" value='timedSwitch2Time' apply-on-change='true' hover-hint='What time in the song the second timed switch activates.'/>
+
+                <slider-setting text='Third Timed Switch' min='0' max='120' increment='1' show-buttons="true" value='timedSwitch3Time' apply-on-change='true' hover-hint='What time in the song the third timed switch activates.'/>
+            
+                <slider-setting text='Fourth Timed Switch' min='0' max='120' increment='1' show-buttons="true" value='timedSwitch4Time' apply-on-change='true' hover-hint='What time in the song the fourth timed switch activates.'/>
+            </scroll-view>
+        </tab>
+
+        <tab tab-name='Timed Colours' tags='tabs'>
+            <scroll-view preferred-height='100' size-delta-y='15'>
+				<horizontal><text text='First Timed Colours' font-size="4" align="Center"/></horizontal>
+				<color-setting  text='Left Saber Colour' value='leftSaberColour1' apply-on-change='true' hover-hint='Changes the colour of the left saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Right Saber Colour' value='rightSaberColour1' apply-on-change='true' hover-hint='Changes the colour of the right saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Bomb Colour' value='bombColour1' apply-on-change='true' hover-hint='Changes the colour of the bombs at the specified time in the Activation Times tab'/>
+				<color-setting  text='Wall Colour' value='wallColour1' apply-on-change='true' hover-hint='Changes the colour of the walls at the specified time in the Activation Times tab'/>
+
+				<horizontal><text text='Second Timed Colours' font-size="4" align="Center"/></horizontal>
+				<color-setting  text='Left Saber Colour' value='leftSaberColour2' apply-on-change='true' hover-hint='Changes the colour of the left saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Right Saber Colour' value='rightSaberColour2' apply-on-change='true' hover-hint='Changes the colour of the right saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Bomb Colour' value='bombColour2' apply-on-change='true' hover-hint='Changes the colour of the bombs at the specified time in the Activation Times tab'/>
+				<color-setting  text='Wall Colour' value='wallColour2' apply-on-change='true' hover-hint='Changes the colour of the walls at the specified time in the Activation Times tab'/>
+
+				<horizontal><text text='Third Timed Colours' font-size="4" align="Center"/></horizontal>
+				<color-setting  text='Left Saber Colour' value='leftSaberColour3' apply-on-change='true' hover-hint='Changes the colour of the left saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Right Saber Colour' value='rightSaberColour3' apply-on-change='true' hover-hint='Changes the colour of the right saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Bomb Colour' value='bombColour3' apply-on-change='true' hover-hint='Changes the colour of the bombs at the specified time in the Activation Times tab'/>
+				<color-setting  text='Wall Colour' value='wallColour3' apply-on-change='true' hover-hint='Changes the colour of the walls at the specified time in the Activation Times tab'/>
+
+				<horizontal><text text='Fourth Timed Colours' font-size="4" align="Center"/></horizontal>
+				<color-setting  text='Left Saber Colour' value='leftSaberColour4' apply-on-change='true' hover-hint='Changes the colour of the left saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Right Saber Colour' value='rightSaberColour4' apply-on-change='true' hover-hint='Changes the colour of the right saber at the specified time in the Activation Times tab'/>
+				<color-setting  text='Bomb Colour' value='bombColour4' apply-on-change='true' hover-hint='Changes the colour of the bombs at the specified time in the Activation Times tab'/>
+				<color-setting  text='Wall Colour' value='wallColour4' apply-on-change='true' hover-hint='Changes the colour of the walls at the specified time in the Activation Times tab'/>
+
+			</scroll-view>
+        </tab>
     </horizontal>
 </bg>

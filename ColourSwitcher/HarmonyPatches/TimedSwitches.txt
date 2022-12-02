@@ -1,0 +1,28 @@
+﻿using Chroma.Colorizer;
+using SiraUtil.Affinity;
+using ColourSwitcher.UI;
+using ColourSwitcher;
+
+namespace ColourSwitcher.HarmonyPatches
+{
+    internal class TimedWallColours : IAffinity
+    {
+        private readonly ObstacleColorizerManager _manager;
+
+        private AudioTimeSyncController.InitData timeSync;
+
+        
+
+        private TimedWallColours(ObstacleColorizerManager manager)
+        {
+            _manager = manager;
+        }
+
+        [AffinityPostfix]
+        [AffinityPatch(typeof(ObstacleController), nameof(ObstacleController.Init))]
+        private void Colorize(ObstacleController __instance, ObstacleData obstacleData)
+        {
+            
+        }
+    }
+}
